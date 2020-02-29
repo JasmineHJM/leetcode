@@ -26,3 +26,37 @@ using namespace std;
 		 }
 	 }
  };
+
+/*
+ class Solution {
+ public:
+	 int max = 0;
+	 int maxDepth(TreeNode* root) {
+
+		 findMax(root, 0);
+		 return max;
+	 }
+	 void findMax(TreeNode* root, int n){
+		 if (root == nullptr) {
+			 if (n > max) max = n;
+			 return;
+		 }
+		 findMax(root->left, n + 1);
+		 findMax(root->right, n + 1);
+
+		 return;
+	 }
+ };*/
+
+ /*
+ class Solution {
+ public:
+	 int maxDepth(TreeNode* root) {
+		 if (root == nullptr) {
+			 return 0;
+		 }
+		 int left = maxDepth(root->left);
+		 int right = maxDepth(root->right);
+		 return left >= right ? (left + 1) : (right + 1);
+	 }
+ };*/
